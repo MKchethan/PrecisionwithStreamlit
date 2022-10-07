@@ -4,6 +4,8 @@ from zipfile import ZipFile
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import nltk
+nltk.download('stopwords')
 # import pymongo
 # from pymongo import MongoClient
 
