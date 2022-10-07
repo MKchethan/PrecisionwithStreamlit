@@ -5,16 +5,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
-# import nltk
-# nltk.download('stopwords')
-# stopwords = nltk.corpus.stopwords.words('english')
-
-# from nltk.corpus import stopwords
-
-# set(stopwords.words("english"))
-# import pymongo
-# from pymongo import MongoClient
-
+import nltk
+nltk.download('stopwords')
 
 st.sidebar.title('Upload the data')
 st.title('PRECISION')
