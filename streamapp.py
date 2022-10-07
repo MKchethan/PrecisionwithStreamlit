@@ -7,6 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from nltk.corpus import stopwords
 import nltk
 nltk.download('stopwords')
+STOPWORDS = set(stopwords.words('english'))
 
 st.sidebar.title('Upload the data')
 st.title('PRECISION')
