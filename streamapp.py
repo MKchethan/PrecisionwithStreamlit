@@ -4,10 +4,9 @@ from zipfile import ZipFile
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from nltk.corpus import stopwords
-import nltk
-nltk.download('stopwords')
-STOPWORDS = set(stopwords.words('english'))
+# import nltk
+# nltk.download('stopwords')
+# STOPWORDS = set(stopwords.words('english'))
 
 st.sidebar.title('Upload the data')
 st.title('PRECISION')
