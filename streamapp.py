@@ -5,12 +5,12 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
-nltk.download()
-stopwords = nltk.download('stopwords')
+# nltk.download()
+stopwords = nltk.corpus.stopwords.words('english')
 
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 
-set(stopwords.words("english"))
+# set(stopwords.words("english"))
 # import pymongo
 # from pymongo import MongoClient
 
