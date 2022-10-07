@@ -4,5 +4,4 @@ pyresparser
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz
 pandas
 streamlit==1.9.2
-pymongo
 scikit-learn
