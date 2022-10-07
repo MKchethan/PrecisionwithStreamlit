@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 nltk.download()
-nltk.download('stopwords')
+stopwords = nltk.download('stopwords')
 
 from nltk.corpus import stopwords
 
