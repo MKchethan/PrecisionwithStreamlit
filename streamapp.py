@@ -4,8 +4,8 @@ from zipfile import ZipFile
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import pymongo
-from pymongo import MongoClient
+# import pymongo
+# from pymongo import MongoClient
 
 
 st.sidebar.title('Upload the data')
@@ -320,20 +320,20 @@ def custom_ner(data):
             ac_df = cosine_df.loc[cosine_df['Status'] == "Selected"]
             re_df = cosine_df.loc[cosine_df['Status'] == "Not Selected"]
 
-            # Connect with the portnumber and host
-            client = MongoClient("mongodb://localhost:27017/")
+#             # Connect with the portnumber and host
+#             client = MongoClient("mongodb://localhost:27017/")
 
-            # Access database
-            db = client["CandidatesResume"]
+#             # Access database
+#             db = client["CandidatesResume"]
 
-            # Access collection of the database
-            mycollection = db["CosineDF"]
-            cos_dict = cosine_df.to_dict()
-            # mycollection.insert_many([cosine_df.to_dict()])
+#             # Access collection of the database
+#             mycollection = db["CosineDF"]
+#             cos_dict = cosine_df.to_dict()
+#             # mycollection.insert_many([cosine_df.to_dict()])
 
-            cosine_df.reset_index(inplace=True)  # Reset Index
-            data_dict = cosine_df.to_dict("records")  # Convert to dictionary
-            mycollection.insert_one({"index": "resume_data", "data": data_dict})  # inesrt into DB
+#             cosine_df.reset_index(inplace=True)  # Reset Index
+#             data_dict = cosine_df.to_dict("records")  # Convert to dictionary
+#             mycollection.insert_one({"index": "resume_data", "data": data_dict})  # inesrt into DB
 
             results(cosine_df, ac_df, re_df)
         else:
@@ -420,22 +420,22 @@ def custom_ner(data):
             ac_df = cosine_df.loc[cosine_df['Status'] == "Selected"]
             re_df = cosine_df.loc[cosine_df['Status'] == "Not Selected"]
 
-            # Connect with the portnumber and host
-            client = MongoClient("mongodb://localhost:27017/")
+#             # Connect with the portnumber and host
+#             client = MongoClient("mongodb://localhost:27017/")
 
-            # Access database
-            db = client["CandidatesResume"]
+#             # Access database
+#             db = client["CandidatesResume"]
 
-            # Access collection of the database
-            mycollection = db["CosineDF"]
-            cos_dict = cosine_df.to_json()
+#             # Access collection of the database
+#             mycollection = db["CosineDF"]
+#             cos_dict = cosine_df.to_json()
 
-            cosine_df.reset_index(inplace=True)  # Reset Index
-            data_dict = cosine_df.to_dict("records")  # Convert to dictionary
-            mycollection.insert_one({"index": "SPY", "data": data_dict})  # inesrt into DB
+#             cosine_df.reset_index(inplace=True)  # Reset Index
+#             data_dict = cosine_df.to_dict("records")  # Convert to dictionary
+#             mycollection.insert_one({"index": "SPY", "data": data_dict})  # inesrt into DB
 
 
-            # mycollection.insert_many([cosine_df.to_dict()])
+#             # mycollection.insert_many([cosine_df.to_dict()])
 
             results(cosine_df, ac_df, re_df)
     else:
@@ -573,20 +573,20 @@ def customZip_ner(candis_df, name, email, phone):
         ac_df = cos_df.loc[cos_df['Status'] == "Selected"]
         re_df = cos_df.loc[cos_df['Status'] == "Not Selected"]
 
-        # Connect with the portnumber and host
-        client = MongoClient("mongodb://localhost:27017/")
+#         # Connect with the portnumber and host
+#         client = MongoClient("mongodb://localhost:27017/")
 
-        # Access database
-        db = client["CandidatesResume"]
+#         # Access database
+#         db = client["CandidatesResume"]
 
-        # Access collection of the database
-        mycollection = db["CosineDF"]
-        cos_dict = cos_df.to_json()
-        # mycollection.insert_many([cos_df.to_dict()])
+#         # Access collection of the database
+#         mycollection = db["CosineDF"]
+#         cos_dict = cos_df.to_json()
+#         # mycollection.insert_many([cos_df.to_dict()])
 
-        cos_df.reset_index(inplace=True)  # Reset Index
-        data_dict = cos_df.to_dict("records")  # Convert to dictionary
-        mycollection.insert_one({"index": "resume_data", "data": data_dict})  # inesrt into DB
+#         cos_df.reset_index(inplace=True)  # Reset Index
+#         data_dict = cos_df.to_dict("records")  # Convert to dictionary
+#         mycollection.insert_one({"index": "resume_data", "data": data_dict})  # inesrt into DB
 
         results(cos_df, ac_df, re_df)
     else:
