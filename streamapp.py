@@ -16,7 +16,7 @@ except AttributeError:
 else:
     ssl._create_default_https_context = _create_unverified_https_context
 
-nltk.download()
+nltk.download('stopwords')
 # STOPWORDS = set(stopwords.words('english'))
 
 st.sidebar.title('Upload the data')
