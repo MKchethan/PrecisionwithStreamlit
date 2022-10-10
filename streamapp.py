@@ -5,7 +5,15 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
-nltk.download('stopwords')
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    passelse:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+nltk.download()
 # STOPWORDS = set(stopwords.words('english'))
 
 st.sidebar.title('Upload the data')
